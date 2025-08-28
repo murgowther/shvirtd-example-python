@@ -3,7 +3,7 @@ include:
   - proxy.yaml
 services:
   web:
-    container_name: cr.yandex/crp8ci0pk31b765kt81r/andrey:python_test
+    image: cr.yandex/crp8ci0pk31b765kt81r/andrey:python_test
     restart: on-failure
     env_file:
       - .env
@@ -33,9 +33,3 @@ services:
       - db_data:/var/lib/mysql
 volumes:
   db_data:
-networks:
-  backend:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.20.0.0/16
