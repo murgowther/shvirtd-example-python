@@ -3,7 +3,7 @@ include:
   - proxy.yaml
 services:
   web:
-    image: cr.yandex/crp8ci0pk31b765kt81r/andrey:python_test
+    image: andrey/python_test:latest
     restart: on-failure
     env_file:
       - .env
